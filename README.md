@@ -55,3 +55,5 @@ Completed user stories:
 Walkthrough of all user stories:
 
 
+
+![gif walkthrough](mailboxWalkthrough.gif)
