@@ -1,56 +1,53 @@
-# Carousel
+# mailbox
 
-CodePath assignment - Recreate Dropbox visual flow using custom view controllers, buttons, images, scrollviews, manual segues, navigation controllers, and tab bar controllers.
+CodePath assignment - Recreate mailbox visual flow using UIView Animations and gestures.
 
-Time spent: 15 hours spent in total
+Time spent: 10 hours spent in total
 
 Completed user stories:
 <ul>
 <ul>
-<li>Static photo tiles on the initial screen
+<li>On dragging the message left...
 
 <ul>
-<li>Optional: Photo tiles move with scrolling</li>
-</ul></li>
-<li>Sign In
+<li>Initially, the revealed background color should be gray.</li>
+<li>As the reschedule icon is revealed, it should start semi-transparent and become fully opaque. If released at this point, the message should return to its initial position.</li>
+<li>After 60 pts, the later icon should start moving with the translation and the background should change to yellow.
 
 <ul>
-<li>Tapping on email/password reveals the keyboard and shifts the scrollview and Sign In button up.</li>
-<li>User sees an error alert when no email is present or no password is present.</li>
-<li>User sees a loading screen upon tapping the Sign In button.</li>
-<li>User sees an error alert when entering the wrong email/password combination.</li>
-<li>User is taken to the tutorial screens upon entering the correct email/password combination.</li>
-<li>Optional: When the keyboard is visible, if the user pulls down on the scrollview, it will dismiss the keyboard.</li>
-<li>Optional: On appear, scale the form up and fade it in.</li>
+<li>Upon release, the message should continue to reveal the yellow background. When the animation it complete, it should show the reschedule options.</li>
 </ul></li>
-<li>Optional: Sign Up
+<li>After 260 pts, the icon should change to the list icon and the background color should change to brown.
 
 <ul>
-<li>Optional: Tapping in the form reveals the keyboard and shifts the scrollview and "Create a Dropbox" button up.</li>
-<li>Optional: Tapping the Agree to Terms checkbox selects the checkbox.</li>
-<li>Optional: Tapping on Terms shows a webview with the terms.</li>
-<li>Optional: User is taken to the tutorial screens upon tapping the "Create a Dropbox" button.</li>
+<li>Upon release, the message should continue to reveal the brown background. When the animation it complete, it should show the list options.</li>
 </ul></li>
-<li>Tutorial Screens
+</ul></li>
+<li>User can tap to dismissing the reschedule or list options. After the reschedule or list options are dismissed, you should see the message finish the hide animation.</li>
+<li>On dragging the message right...
 
 <ul>
-<li>User can page between the screens</li>
-<li>Optional: User can page between the screens with updated dots</li>
-<li>Optional: Upon reaching the 4th page, hide the dots and show the "Take Carousel for a Spin" button.</li>
-</ul></li>
-<li>Image Timeline
+<li>Initially, the revealed background color should be gray.</li>
+<li>As the archive icon is revealed, it should start semi-transparent and become fully opaque. If released at this point, the message should return to its initial position.</li>
+<li>After 60 pts, the archive icon should start moving with the translation and the background should change to green.
 
 <ul>
-<li>Display a scrollable view of images.</li>
-<li>User can tap on the conversations button to see the conversations screen (push).</li>
-<li>User can tap on the profile image to see the settings view (modal from below).</li>
+<li>Upon release, the message should continue to reveal the green background. When the animation it complete, it should hide the message.</li>
 </ul></li>
-<li>Settings
+<li>After 260 pts, the icon should change to the delete icon and the background color should change to red.
 
 <ul>
-<li>User can dismiss the settings screen.</li>
-<li>User can log out</li>
+<li>Upon release, the message should continue to reveal the red background. When the animation it complete, it should hide the message.</li>
 </ul></li>
+</ul></li>
+<li>Optional: Panning from the edge should reveal the menu
+
+<ul>
+<li>Optional: If the menu is being revealed when the user lifts their finger, it should continue revealing.</li>
+<li>Optional: If the menu is being hidden when the user lifts their finger, it should continue hiding.</li>
+</ul></li>
+
+</ul>
 
 </ul>
 
@@ -58,4 +55,4 @@ Completed user stories:
 Walkthrough of all user stories:
 
 
-![gif walkthrough](carouselWalkthrough.gif)
+![gif walkthrough](mailboxWalkthrough.gif)
