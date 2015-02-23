@@ -105,7 +105,7 @@ class MailboxViewController: UIViewController, UIScrollViewDelegate, UIGestureRe
             self.listIconImageView.alpha = 0.0
             self.leftSwipeIconsImageView.center.x = 287.5 + 60 + offset
         } else if ((offset > -60) && (offset <= 60)) {
-            self.deleteIconImageView.alpha = (offset/60)*1.0
+            self.archiveIconImageView.alpha = (offset/60)*1.0
             self.laterIconImageView.alpha = -(offset/60)*1.0
         } else if ((offset > 60) && (offset <= 260)) {
             self.deleteIconImageView.alpha = 0.0
@@ -153,12 +153,13 @@ class MailboxViewController: UIViewController, UIScrollViewDelegate, UIGestureRe
                     self.messageImageView.center.x = 160
                 })
             } else if ((offset > 60) && (offset <= 260)) {
-                UIView.animateWithDuration(0.5, animations: { () -> Void in
-                    self.messageImageView.center.x = 160
+                UIView.animateWithDuration(0.1, animations: { () -> Void in
+                    self.messageImageView.center.x = 500
                     })  { (finished: Bool) -> Void in
                         UIView.animateWithDuration(0.5, delay: 0, options: nil, animations: { () -> Void in
                             self.feedImageView.center.y = self.feedImageView.center.y - 86
                             }) { (finished: Bool) -> Void in
+                                self.messageImageView.center.x = 160
                                 UIView.animateWithDuration(0.5, delay: 1, options: nil, animations: { () -> Void in
                                     self.feedImageView.center.y = self.feedImageView.center.y + 86
                                     }) { (Bool) -> Void in
@@ -166,12 +167,13 @@ class MailboxViewController: UIViewController, UIScrollViewDelegate, UIGestureRe
                         }
                 }
             } else if (offset > 260) {
-                UIView.animateWithDuration(0.5, animations: { () -> Void in
-                    self.messageImageView.center.x = 160
+                UIView.animateWithDuration(0.3, animations: { () -> Void in
+                    self.messageImageView.center.x = 500
                     })  { (finished: Bool) -> Void in
                         UIView.animateWithDuration(0.5, delay: 0, options: nil, animations: { () -> Void in
                             self.feedImageView.center.y = self.feedImageView.center.y - 86
                             }) { (finished: Bool) -> Void in
+                                self.messageImageView.center.x = 160
                                 UIView.animateWithDuration(0.5, delay: 1, options: nil, animations: { () -> Void in
                                     self.feedImageView.center.y = self.feedImageView.center.y + 86
                                     }) { (Bool) -> Void in
